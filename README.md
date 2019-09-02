@@ -12,7 +12,7 @@
 
 </p>
  <h3>后台目录：</h3>
-  <img  src="./ima/mu.png" >
+  <img  src="/ima/mu.png" >
    <h3>页面展示：</h3>
   <img  src="./ima/fir.png" >
    
