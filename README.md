@@ -12,11 +12,11 @@
 
 </p>
  <h3>后台目录：</h3>
-  <img  src="./ima/mu.png" style="margin-left:300px">
+  <img  src="./ima/mu.png" style="margin-left:400px">
    <h3>页面展示：</h3>
-  <img  src="./ima/fir.png" style="margin-left:300px">
+  <img  src="./ima/fir.png" style="margin-left:400px">
    
-  <img  src="./ima/sec.png" style="margin-left:300px">
+  <img  src="./ima/sec.png" style="margin-left:400px">
    <img  src="./ima/thi.png" >
    
   <img  src="./ima/four.png" >
