@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/*书写通用body样式以及通用超级链接样式*/
+*
+{
+	margin:0;
+	padding:0;
+	border:0;
+	list-style:0;
+}
+body
+{
+	font-family:宋体;
+	font-size:16px;
+	color:#000000;
+	margin: 0;
+	padding: 0;
+}
+img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+.head_logo img {
+	width: 100%;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+.head_logo {
+	width: 390px;
+	height: 48px;
+	display: block;
+	float: left;
+	line-height: 90px;
+	margin-top: 21px;
+}
+.head_nav {
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+	
+}
+
+.head_nav_R {
+	width: auto;
+	height: 90px;
+	float: right;
+}
+.head_nav {
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+
+}
+
+.head_nav_R a {
+	float: left;
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #333;
+	line-height: 90px;
+	font-size: 20px;
+}
+.head_nav_R a:hover {
+	color: #f36054;
+	text-decoration: underline;
+}
+
+
+h3
+{
+	text-align:right;
+}
+a
+{
+	font-size:26px;
+	color:#666;
+	text-decoration:none;
+}
+a:hover
+{
+	color:#900;
+	text-decoration:underline;
+}
+#top
+{
+	width:1700px;
+	height:120px;
+	margin:0 auto;
+}
+#left
+{
+	margin:5px auto;
+	/*position:absolute;
+	left:150px;*/
+	float:left;
+}
+.red
+{
+	color:#ff0000;
+}
+#content
+{
+	width:1700px;
+	min-height:900px;
+    height:auto;
+	margin:5px auto;
+	clear:both;
+	background:#fafafa;
+	overflow:auto;
+}
+#content1
+{
+	overflow:both;
+	background:#fafafa;
+    width:1700px;
+    overflow-x:auto;
+	overflow-y:auto;
+    margin:5px auto;
+    height:auto;
+}
+#middle
+{
+	width:40%;
+	margin:auto;
+	text-align:center;
+
+	clear:both;
+	height:auto;
+}
+#right
+{
+	/*position:absolute;*/
+	width:580px;
+	height:480px;
+	padding:3px 3px 3px 3px;
+	float:right;
+	/*border:2px solid #039;*/
+	/*right:250px;*/
+	font-size:20px;
+	/*background:#DCF5FA;*/
+}
+#right body,table,form,input
+{
+	padding:0;
+	margin:0;
+	border:0;
+}
+#right td
+{
+	paddion-top:10px;
+	padding-bottom:10px;
+	/*控制表单中每行的距离*/
+}
+#right .content
+{
+	/*表格的样式*/
+	width:520px;
+	height:100%;
+	margin:10px auto;
+	/*表格在浏览器中居中*/
+}
+#right .left
+{
+	/*左侧单元格样式*/
+	width:120px;
+	text-align:right;
+}
+#right .center
+{
+	text-align:center;
+	font-size:40px;
+	padding-bottom:20px;
+}
+#right .num,.pas,.yan,.tex01
+{
+	/*对文本框设置相同的宽、高、边框和内边距*/
+	width:200px;
+	height:30px;
+	font-size:20px;
+	border:1px solid #38a1bf;
+	padding:2px 2px 2px 22px;
+}
+#right .num
+{
+	/*定义第一个文本框的背景和文本颜色*/
+	background:url(../images/1.jpg) no-repeat 5px center #fff;
+}
+#right .pas
+{
+	/*定义第二个文本框的背景*/
+	background:url(../images/2.jpg) no-repeat 5px center #fff;
+}
+#right .tex01
+{
+	background:<i class="fa fa-address-card"></i> fa-address-card no-repeat 5px center #fff;
+}
+#right input
+{
+	font-size:20px;
+}
+#right .btn input
+{
+	/*定义按钮的样式*/
+	width:300px;
+	height:40px;
+	align:center;
+	font-size:16px;
+	background-color:#0080ff;
+}
+#footer
+{
+	width:1000px;
+	height:60px;
+	text-align:center;
+	font-size:16px;
+	padding-top:30px;
+	padding-bottom:1px;
+	margin:0 auto;
+	bottom:0 px;
+}
+#code
+{
+	background-color:#808080;
+	font-family:Arial;
+	font-style:italic;
+	border:0;
+	padding:2px 3px;
+	letter-spacing:2px;
+	color:#400040;
+	font-weight:bolder;
+}

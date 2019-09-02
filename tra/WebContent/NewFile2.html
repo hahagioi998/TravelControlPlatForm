@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+//准备好body中的内容
+//使用用户聚焦的函数
+
+
+
+function userGetFocus(){
+//获取userspan的Id
+var spanId=document.getElementById("user_span");
+//给span中添加内容
+spanId.innerHTML="<font color='blue' size='2'>请输入3~19位的用户名</font>"
+}
+//使用用户失去焦点的函数
+function userLoseFocus(){
+//这里先获取input文本框 的内容
+
+var user_Name=document.getElementById("username");
+var len =user_Name.value.trim.length;
+if(len==0){
+var spanId=document.getElementById("user_span");
+spanId.innerHTML="<font color='red' size='2'>*请输入3~19位的用户名</font>";
+return false;
+}else if(len<3 ||len>19){
+var spanId=document.getElementById("user_span");
+spanId.innerHTML="<font color='red' size='2'>*您输入的用户名不符合规范，请重新输入！</font>";
+return false;
+}else{
+
+var spanId=document.getElementById("user_span");
+spanId.innerHTML="<font color='blue' size='2'>您输入的用户名格式正确！</font>";
+return true;
+     }
+
+  
+}//函数
+
+//定义password的聚焦函数
+function passGetFocus(){
+var passSpan=document.getElementById("pass_span");
+passSpan.innerHTML="<font size='2' color ='blue'>请输入8~19位的密码,至少包含字母、数字、特殊字符(不包含空格)中两种</font>";
+}
+//定义一个password的失焦的函数
+function passLoseFocus(){
+var pass_num=document.getElementById("password").value.trim;
+var pass_len=pass_num.length;
+//判断
+if(pass_len==0){
+var passSpan=document.getElementById("pass_span");
+passSpan.innerHTML="<font size='2' color ='red'>*密码不能为空,请输入8~19位密码</font>";
+return false;
+}else if(pass_len<8 || pass_len>19){
+var passSpan=document.getElementById("pass_span");
+passSpan.innerHTML="<font size='2' color='red'>*请输入8~19位密码</font>";
+return false;
+}else{
+
+var regPasswordSpecial = /[~!@#%&=;':",./<>_\}\]\-\$\(\)\*\+\.\[\?\\\^\{\|]/;
+var regPasswordAlpha = /[a-zA-Z]/;
+var regPasswordNum = /[0-9]/;
+var password;
+function atLeastTwo(password) {
+  var a = regPasswordSpecial.test(password) ? 1 : 0;
+  var b = regPasswordAlpha.test(password) ? 1 : 0;
+  var c = regPasswordNum.test(password) ? 1 : 0;
+  return a + b + c;
+
+}
+if(atLeastTwo(pass_num.value) < 2){
+ var passSpan=document.getElementById("pass_span");
+  passSpan.innerHTML="<font color='red' size='2'>密码中至少包含字母、数字、特殊字符的两种</font>";
+     return false;
+ }else{
+var passSpan=document.getElementById("pass_span");
+passSpan.innerHTML="<font color='blue' size='2'>密码格式正确</font>";
+return true;
+     }
+
+}
+}
+function tijiao(){
+var user_result=userLoseFocus();
+var pass_result=passLoseFocus();
+if(user_result && pass_result ){
+return true;
+}else{
+return false;
+} 
+}
+</script>
+</head>
+<body>
+<form action="index1.jsp" onsubmit="return tijiao()" >
+<input style="margin-top:50px;margin-left:80px;height:50px;width:300px" placeholder="请输入用户名" type="text" id="username" name="username" onfocus="userGetFocus()" onblur="userLoseFocus()"/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="user_span"></span><br/>
+<input style="height:50px;width:300px;margin-left:80px;margin-top: 40px;"  placeholder="请输入密码" type="password" id="password" name="password"onfocus="passGetFocus()" onblur="passLoseFocus()"/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pass_span"></span>
+<p style="margin-left: 80px;margin-top: 30px;"><a>忘记密码？</a></p>
+<p style="margin-left: 255px;margin-top:-20px;">还没有账号？<a href="rej.jsp" target="_blank" >立即注册</a></p>
+<input type="submit" style="width:300px;margin-left: 80px;margin-top:20px;" value="登录"/>
+</form>
+</body>
+</html>

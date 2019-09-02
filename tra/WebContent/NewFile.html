@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+ <script src="js/jquery-1.8.3.min.js"></script> 
+<script src="layer/layer.js"></script>
+<script language="javascript">  
+window.onload=function(){
+	layer.msg('同上', {
+		  icon: 2,
+		  title:'Tip',
+		  time: 10000 //2秒关闭（如果不配置，默认是3秒）
+		});  
+		 window.location.href="index2.jsp";
+}
+</script>
+</head>
+<body>
+<form action ="index.php" method="post" onsubmit="return tijiao()">
+<a id="tit"  onclick='panduan()'>555</a>
+用户名：<input type="text" id="user_name" onfocus="userGetFocus()" onblur="userLoseFocus()"/><span id="user_span"></span><br/><br/>
+密　码：<input type="password" id="password_name" onfocus="passGetFocus()" onblur="passLoseFocus()"/><span id="pass_span"></span><br/>
+<input type="submit" value="提交">
+
+
+</form>
+</body>
+</html>
